@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When defect is closed inform Every One</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Letter_head_for_bug_tracker</letterhead>
+    <name>When Defect is Closed</name>
+    <style>formalLetter</style>
+    <subject>Defect ID &apos;{!Defect__c.Name}&apos; Status is Closed</subject>
+    <textOnly>Hi,
+
+The defect &apos;{!Defect__c.Defect_ID__c}&apos; Status is &apos;Closed&apos;.
+
+To view this Defect click on this link -
+
+{!Defect__c.Detail_link_URL__c}
+
+Thanks &amp; Regards
+Zensar System Administrator</textOnly>
+    <type>html</type>
+</EmailTemplate>

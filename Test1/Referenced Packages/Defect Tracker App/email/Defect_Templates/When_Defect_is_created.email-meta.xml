@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When defect is created Email alert should go to the Assigned to</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Letter_head_for_bug_tracker</letterhead>
+    <name>When Defect is created and assigned to</name>
+    <style>formalLetter</style>
+    <subject>New Defect is created And Assigned to you</subject>
+    <textOnly>Hi {!Defect__c.Assigned_To__c} ,
+
+New defect - {!Defect__c.Name} has been detected. Kindly look into the detail and fix it till {!Defect__c.Planned_Closer_Date__c}.
+
+{!Defect__c.Detail_link_URL__c}
+
+
+Thanks &amp; Regards
+{!Defect__c.Assigned_By__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

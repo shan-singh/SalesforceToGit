@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When defect is created Email alert should go to the Owner</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Letter_head_for_bug_tracker</letterhead>
+    <name>Defect Created</name>
+    <style>formalLetter</style>
+    <subject>Defect is created</subject>
+    <textOnly>Hi,
+
+The defect is created with Defect ID &apos;{!Defect__c.Defect_ID__c}&apos;
+
+To view this Defect click on this link -
+
+{!Detail_Link_URL.ZenBugTracker__Defect__c.Id}
+
+Thanks &amp; Regards
+Zensar System Administrator</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#CCCCCC</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#AAAAFF</color>
+        <height>5</height>
+    </bottomLine>
+    <description>Use Zensar letter head to send email alerts</description>
+    <footer>
+        <backgroundColor>#000066</backgroundColor>
+        <height>5</height>
+        <horizontalAlignment>Center</horizontalAlignment>
+        <logo>Defect_Document_of_header_footer/Zensar_Footer.jpg</logo>
+        <verticalAlignment>Middle</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#000066</backgroundColor>
+        <height>80</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Defect_Document_of_header_footer/Zensar_Header.jpg</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#AAAAFF</color>
+        <height>5</height>
+    </middleLine>
+    <name>Letter head for bug tracker</name>
+    <topLine>
+        <color>#AAAAFF</color>
+        <height>5</height>
+    </topLine>
+</Letterhead>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defect Tracker App</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <namespacePrefix>ZenBugTracker</namespacePrefix>
+    <types>
+        <members>Defectcontroller</members>
+        <members>DefectcontrollerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>DefectSearchManagementSystem</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Defect_Tracker</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>DT_User__c.Email__c</members>
+        <members>DT_User__c.Role__c</members>
+        <members>Defect__c.Actual_Closer_Date__c</members>
+        <members>Defect__c.Assigned_By_Email__c</members>
+        <members>Defect__c.Assigned_By__c</members>
+        <members>Defect__c.Assigned_To__c</members>
+        <members>Defect__c.Assigned_it_to_email__c</members>
+        <members>Defect__c.Comments_by_Development_Team__c</members>
+        <members>Defect__c.Comments_by_QA_team__c</members>
+        <members>Defect__c.Defect_Age__c</members>
+        <members>Defect__c.Defect_Detected_On__c</members>
+        <members>Defect__c.Defect_ID__c</members>
+        <members>Defect__c.Defect_Name__c</members>
+        <members>Defect__c.Description__c</members>
+        <members>Defect__c.Detail_link_URL__c</members>
+        <members>Defect__c.Effort_To_Fix__c</members>
+        <members>Defect__c.Indicator__c</members>
+        <members>Defect__c.Logged_In_As__c</members>
+        <members>Defect__c.Massassignflag__c</members>
+        <members>Defect__c.Module_Name__c</members>
+        <members>Defect__c.Planned_Closer_Date__c</members>
+        <members>Defect__c.Priority__c</members>
+        <members>Defect__c.Release__c</members>
+        <members>Defect__c.Severity__c</members>
+        <members>Defect__c.Status__c</members>
+        <members>Defect__c.Steps_to_Fix__c</members>
+        <members>Defect__c.Steps_to_Reproduce__c</members>
+        <members>Defect__c.Type__c</members>
+        <members>Project__c.Project_Manager__c</members>
+        <members>Release__c.Completion_Date__c</members>
+        <members>Release__c.Estimated_End_Date__c</members>
+        <members>Release__c.Project_Manager__c</members>
+        <members>Release__c.Project__c</members>
+        <members>Release__c.Release_Start_Date__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>DT_User__c</members>
+        <members>Defect__c</members>
+        <members>Project__c</members>
+        <members>Release__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>DT_User__c</members>
+        <members>Defect__c</members>
+        <members>Defects_Search</members>
+        <members>Project__c</members>
+        <members>Release__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Defect_Document_of_header_footer</members>
+        <members>Defect_Document_of_header_footer/Zensar_Footer.jpg</members>
+        <members>Defect_Document_of_header_footer/Zensar_Header.jpg</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>Defect_Templates</members>
+        <members>Defect_Templates/Defect_Created_1</members>
+        <members>Defect_Templates/Defect_is_Closed_1</members>
+        <members>Defect_Templates/Mass_Assignment_to_Assigned_to</members>
+        <members>Defect_Templates/When_Defect_is_created</members>
+        <members>Defect_Templates/When_defect_status_is_Changed</members>
+        <members>Defect_Templates/send_mail_to_assignee</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
+        <members>DT_User__c-DT User Layout</members>
+        <members>Defect__c-DMS Layout</members>
+        <members>Defect__c-Defect Layout</members>
+        <members>Project__c-Project Layout</members>
+        <members>Release__c-Release Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Letter_head_for_bug_tracker</members>
+        <name>Letterhead</name>
+    </types>
+    <types>
+        <members>DT_User__c.All</members>
+        <members>DT_User__c.View1</members>
+        <members>Defect__c.All</members>
+        <members>Defect__c.Closed_Defects</members>
+        <members>Defect__c.Fixed_Defects</members>
+        <members>Defect__c.In_Progress_Defects</members>
+        <members>Defect__c.New_Defects</members>
+        <members>Defect__c.Open_Defects</members>
+        <members>Defect__c.Re_Open_Defects</members>
+        <members>Project__c.All</members>
+        <members>Release__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>LogACall</members>
+        <members>NewEvent</members>
+        <members>NewGroup</members>
+        <members>NewNote</members>
+        <name>QuickAction</name>
+    </types>
+    <types>
+        <members>Defect__c.Defect_has_been_assigned_it_to_you</members>
+        <members>Defect__c.Send_Email_When_Status_is_Closed_to_everyone</members>
+        <members>Defect__c.Send_Notification_to_Assigned_User_and_Raised_By_User_and_manager</members>
+        <members>Defect__c.Send_email_to_user_for_mass_assignment</members>
+        <members>Defect__c.send_mail_to_assignee_when_assigned_by_is_filled</members>
+        <members>Defect__c.when_defect_is_created_it_will_send_mail_to_the_user_who_has_created_the_defect</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>Defect__c.Update_assigned_by_email_field</members>
+        <members>Defect__c.Update_email_field_and_defect</members>
+        <members>Defect__c.update_Actual_close_date</members>
+        <members>Defect__c.when_field_assigned_to_is_filled</members>
+        <name>WorkflowFieldUpdate</name>
+    </types>
+    <types>
+        <members>Defect__c.Defect search action</members>
+        <members>Defect__c.When defect is created</members>
+        <members>Defect__c.When status is closed</members>
+        <members>Defect__c.When status is closed populate actual closer date</members>
+        <members>Defect__c.When user fills assigned by</members>
+        <members>Defect__c.when Defect Status changed Inform the User</members>
+        <members>Defect__c.when sender fills assigned to</members>
+        <members>Defect__c.when sender fills assigned to email</members>
+        <name>WorkflowRule</name>
+    </types>
+    <version>31.0</version>
+</Package>

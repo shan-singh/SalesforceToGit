@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Whenever the defect status is changed email should be sent</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Letter_head_for_bug_tracker</letterhead>
+    <name>When defect status is Changed</name>
+    <style>formalLetter</style>
+    <subject>The status of defect &apos; {!Defect__c.Name}&apos; Is changed to &apos;{!Defect__c.Status__c}&apos;</subject>
+    <textOnly>Hi {!Defect__c.Assigned_By__c},
+
+The Defect Name &apos;{!Defect__c.Defect_ID__c}&apos; status is changed to &apos;{!Defect__c.Status__c}&apos;
+
+To view this Defect click on this link -
+
+{!Defect__c.Detail_link_URL__c}
+
+
+Thanks &amp; Regards
+Zensar System Administrator</textOnly>
+    <type>html</type>
+</EmailTemplate>

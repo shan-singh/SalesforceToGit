@@ -1,0 +1,15 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<br>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div><span style="background-color: rgb(255, 255, 255);">Hi {!Defect__c.Assigned_To__c}&nbsp;,&nbsp;</span></div><font face="arial" style="font-size: 12pt;"><div><br></div>New defect -&nbsp;{!Defect__c.Name} is detected and Assigned to you. Kindly look into the defect and fix it till&nbsp;{!Defect__c.Planned_Closer_Date__c}.</font><div><br></div><div>To view this Defect click on this link -</div><div><a href="{!Defect__c.Detail_link_URL__c}">{!Defect__c.Detail_link_URL__c}</a><br><div style="font-size: 12pt;"><a href="
+{!ZenBugTracker__Detail_link_URL__c}"><br></a></div><div style="font-size: 12pt;"><br></div><div><div style="font-size: 12pt;">Thanks &amp; Regards</div><div style="font-size: 12pt;"><span style="font-size: 12pt; background-color: rgb(255, 255, 255);">Zensar System&nbsp;</span><font face="arial" style="font-size: medium;">Administrator</font></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merge Any Object</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <namespacePrefix>AcumenMerge</namespacePrefix>
+    <types>
+        <members>MergeController</members>
+        <members>MergeControllerTest</members>
+        <members>MergeUtil</members>
+        <members>MergeWrapper</members>
+        <members>MergeWrapperTest</members>
+        <members>SearchWrapper</members>
+        <members>SearchWrapperTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>MergeWiz1</members>
+        <members>MergeWiz2</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Merge_Any_Object</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Robot__c.Cost__c</members>
+        <members>Robot__c.Mobility__c</members>
+        <members>Robot__c.Number__c</members>
+        <members>Robot__c.Parent_Company__c</members>
+        <members>Robot__c.Type__c</members>
+        <members>Supplier__c.Name__c</members>
+        <members>Supplier__c.RobotSupplier__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Robot__c</members>
+        <members>Supplier__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Merge</members>
+        <members>Supplier__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Robot__c-Robot Layout</members>
+        <members>Supplier__c-Supplier Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Robot__c.All</members>
+        <members>Supplier__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>MergeAnyObjectLib</members>
+        <members>jQuery171</members>
+        <name>StaticResource</name>
+    </types>
+    <version>31.0</version>
+</Package>

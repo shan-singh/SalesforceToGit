@@ -1,0 +1,36 @@
+<apex:page id="UnitySetup" name="UnitySetup" controller="udc.UnitySetupController" >
+    <apex:sectionHeader title="Application Setup" subtitle=""/>
+    <p>
+        Please use this page to manage your setup information for Unity.
+    </p>
+    <p>
+        <em>Access Key:</em> Access Key: This is the Access Key value stored in the service endpoint.
+    </p>  
+     <p>
+        <em>Send Key Unencrypted:</em> This will determine if the key is sent encrypted to the service endpoint or not. Your service endpoint must have the same encryption setting as the Force.com platform.    </p> 
+    <p>
+        <em>Service Endpoint:</em> Enter in the domain of the service endpoint. Example: (https://demo.demosf4.com). The service endpoint must be SSL enabled for the Force.com platform to communicate successfully. 
+    </p>
+    <apex:messages />
+    <apex:form >
+        <apex:pageBlock title="Setup Information">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!SaveSetupInfo}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1" title="Setup Data">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Access Key"/>
+                    <apex:inputText value="{!encryptionKey}" style="width:300px"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Send Key Unencrypted"/>
+                    <apex:inputCheckbox value="{!sendKeyUnencrypted}"/>
+                </apex:pageBlockSectionItem>        
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Service Endpoint"/>
+                    <apex:inputText value="{!serviceEndpoint}" style="width:300px"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>

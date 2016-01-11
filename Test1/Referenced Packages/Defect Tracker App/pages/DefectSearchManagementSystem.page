@@ -1,0 +1,140 @@
+<apex:page controller="ZenBugTracker.Defectcontroller" sidebar="false" showHeader="false">
+    <apex:messages />
+    <script type="text/javascript">
+        function doSearch() {searchServer(document.getElementById("Name").value);}
+    </script>
+            <script>
+                function checkAll(cb)
+                {
+                    var inputElem = document.getElementsByTagName("input");
+                    for(var i=0; i<inputElem.length; i++)
+                    {
+                        if(inputElem[i].id.indexOf("checkedone")!=-1)
+                        inputElem[i].checked = cb.checked;
+                    }
+                }
+                    
+            
+            </script>
+            
+    <apex:form >
+    <div id="pageload">
+     <!--   <apex:pageBlock title="" mode="edit" > -->
+   <!--     <apex:pageBlockButtons location="top" > -->
+            <apex:commandButton value="Home" action="{!Home}" styleClass="btn" style="float:left; background:#85C2FF"/>
+            <apex:commandButton value="New" action="{!New_1}" styleClass="btn" style="float:left; background:#ff8080"/>
+            <apex:commandLink value="Logout" action="{!Logout}" styleClass="lnk" style="float:right"/>
+            <apex:actionFunction action="{!assignDefects}" name="assignDefectevent" reRender="table" />
+   <!--     </apex:pageBlockButtons> -->
+           
+            <table width="100%" border="0">
+                <tr> 
+                    <td width="200" valign="top">
+                         <apex:pageBlock title="Search"> 
+                   <div  mode="edit" id="criteria">   
+                             
+                            <apex:actionFunction name="searchServer" action="{!runSearch}" rerender="results,debug,errors">
+                                <apex:param name="Name" value="" />
+                            </apex:actionFunction>
+                            <table cellpadding="2" cellspacing="2">
+                               <tr>
+                               <!--     style="font-weight:bold;">Defect Name<br/> -->
+                               <td>   <input type="text" id="Name" onkeyup="doSearch();"/>                                     </td>
+                                </tr>
+                            </table>
+                    
+                     </div>
+                        </apex:pageBlock> 
+                    </td>
+                    <td valign="top">
+
+                        <apex:pageBlock title="Select Defects " id="results" > 
+                           <apex:pageBlockButtons location="top" >
+                                <apex:commandButton value="Assign Defects" action="{!assignDefects}" reRender="results"/>
+                                <!--<input type="button" onclick="assignDefectevent()"/>-->
+                                <!--<apex:actionSupport reRender="pageload1" event="onclick"/>-->
+                                <apex:inputField value="{!defectRec.ZenBugTracker__Assigned_To__c}" id="inputVal"/>
+                           
+                            </apex:pageBlockButtons>
+                     <!--       <apex:pageBlockSection columns="0">
+                         
+                            
+                            </apex:pageBlockSection>     -->
+                            <apex:pageBlockSection columns="1" id="tblsc">
+                                <apex:pageblockTable value="{!fieldsWrapperList}" var="wrap" id="table">
+                                    
+                                    <apex:column headerValue="Select">
+                                    <apex:facet name="header"> 
+                                            <apex:inputCheckbox id="test">
+                                               <apex:actionSupport event="onclick" onsubmit="checkAll(this)" rerender="Selected_PBS"/>
+                                            </apex:inputCheckbox>
+                                         </apex:facet> 
+                                        <apex:inputcheckbox value="{!wrap.selected}" id="checkedone"/>
+                                    </apex:column>
+                                   
+                                    <apex:column headerValue="Defect ID">
+                                    <apex:outputLink value="/{!wrap.dfctFld.id}"> {!wrap.dfctFld.Name} </apex:outputlink> 
+                                    </apex:column>
+                                    
+                                    
+                                    <apex:column headerValue="Assigned to">
+                                        {!wrap.dfctFld.Assigned_to__r.Name}
+                                    </apex:column>
+                                    
+                                    <apex:column headerValue="Assigned By">
+                                        {!wrap.dfctFld.Assigned_By__r.Name}
+                                    </apex:column>
+                                    
+                                     <apex:column headerValue="Type">
+                                        {!wrap.dfctFld.ZenBugTracker__Type__c}
+                                    </apex:column>
+                                    
+                                     <apex:column headerValue="Date Of Creation" >
+                                     <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                    <apex:param value="{!wrap.dfctFld.ZenBugTracker__Defect_Detected_On__c}" /> 
+                                    </apex:outputText>
+                                        
+                                    </apex:column>
+                                    <apex:column headerValue="Status">
+                                        {!wrap.dfctFld.ZenBugTracker__Status__c}
+                                    </apex:column>
+                                    
+                                    <apex:column headerValue="Priority">
+                                        <apex:outputText value="{!wrap.dfctFld.ZenBugTracker__Indicator__c}" escape="false">
+                                        </apex:outputText>          
+                                    </apex:column>
+                                    
+                                </apex:pageblockTable>
+                            </apex:pageBlockSection>
+                        </apex:pageBlock> 
+                       
+                        
+                    </td>
+                </tr>
+            </table>
+            <style>
+            .btn{
+           
+              vertical-align: middle;
+              border: 2px solid Black;
+              width: 100px;
+              border-radius: 25px;
+              margin: 0;
+             } 
+             
+            </style>
+             <style>
+            
+             
+  .lnk
+  {
+      color: SteelBlue!important;
+      text-decoration:none;
+      margin: 0;
+  }
+
+            </style>
+            </div>
+      <!--  </apex:pageBlock> -->
+    </apex:form>
+</apex:page>
